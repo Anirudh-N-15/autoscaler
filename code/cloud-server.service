@@ -1,0 +1,14 @@
+[Unit]
+Description=Cloud Autoscaling Assignment Server
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=anirudh
+User=anirudh
+WorkingDirectory=/home/anirudh
+ExecStart=/usr/bin/python3 /home/anirudh/server.py
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
